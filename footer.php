@@ -5,7 +5,8 @@
  */
 ?>
 
-	</div><!-- #main  -->
+		</div><!-- #main  -->
+	</div> <!-- page content -->
 
 	<footer id="colophon" role="contentinfo">
 			<div id="site-generator">
@@ -18,5 +19,6 @@
 <?php wp_footer(); ?>
 
 	<script src="<?php echo get_template_directory_uri() . '/js/bootstrap.min.js' ?>"></script>
+
 </body>
 </html>

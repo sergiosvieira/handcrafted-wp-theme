@@ -6,3 +6,28 @@ Author URI: http://www.bravoinovacao.com
 Description: Customized AADIC Wordpress Theme
 Version: 0.5
 */
+
+/** 
+	MISC
+**/
+
+#page {
+	margin-top: 0px;
+}
+
+#page-content {
+	background-color: red;
+	width: 960px;
+}
+
+/**
+	HEADER
+**/
+#site-title {
+	background: url(images/topo.jpg);
+	height: 177px;
+	width: 960px;
+	display: block;
+	text-indent: -999999px;
+}
+

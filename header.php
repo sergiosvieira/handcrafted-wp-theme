@@ -61,23 +61,22 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-	<div id="page" class="hfeed">
-		<header id="branding" role="banner">
-				<hgroup>
-					<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-				</hgroup>
-				
-				<nav id="utility" role="article">
-					<?php wp_nav_menu( array( 'theme_location' => 'utility' ) ); ?>
-				</nav><!-- #utility -->
-	
-				<nav id="access" role="article">
-					<h1 class="section-heading"><?php _e( 'Main menu', 'themename' ); ?></h1>
-					<div class="skip-link visuallyhidden"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'themename' ); ?>"><?php _e( 'Skip to content', 'themename' ); ?></a></div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				</nav><!-- #access -->
-		</header><!-- #branding -->
+	<div id="page" class="container">
+		<div id="page-content">
+			<header id="branding" role="banner" class="row">
+					<section class="col-sm-12">
+							<span>
+								<a href="<?php echo home_url( '/' ); ?>" id="site-title" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+									<?php bloginfo( 'name' ); ?>
+								</a>
+							</span>
+					</section>					
+					<nav id="access" role="article" class="col-sm-12">
+						<h1 class="section-heading"><?php _e( 'Main menu', 'themename' ); ?></h1>
+						<div class="skip-link visuallyhidden"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'themename' ); ?>"><?php _e( 'Skip to content', 'themename' ); ?></a></div>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+					</nav><!-- #access -->
+			</header><!-- #branding -->
 	
 	
 		<div id="main">
