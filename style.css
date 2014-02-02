@@ -12,12 +12,26 @@ Version: 0.5
 **/
 
 #page {
-	margin-top: 0px;
+	margin-top: 50px;
 }
 
 #page-content {
-	background-color: red;
+	background-color: white;
 	width: 960px;
+}
+
+.container{
+	padding-left: 24px;
+	width:960px
+}
+
+/**
+	BODY
+**/
+body {
+	background: url(images/bg-geral.jpg) no-repeat;
+	background-position: top;
+	background-color: #0c2a4c;
 }
 
 /**
