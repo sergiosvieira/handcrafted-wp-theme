@@ -72,11 +72,9 @@
 							</span>
 					</section>					
 					<nav id="access" role="article" class="col-sm-12">
-						<h1 class="section-heading"><?php _e( 'Main menu', 'themename' ); ?></h1>
-						<div class="skip-link visuallyhidden"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'themename' ); ?>"><?php _e( 'Skip to content', 'themename' ); ?></a></div>
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						 <?php 
+						 	list_pages();
+						 ?> 
 					</nav><!-- #access -->
 			</header><!-- #branding -->
-	
-	
 		<div id="main">

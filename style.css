@@ -45,3 +45,31 @@ body {
 	text-indent: -999999px;
 }
 
+/**
+	MENU
+**/
+.menu {
+	background: url(images/bg-menu.jpg);
+}
+
+.menu-item {
+	height: 103px;
+	display: block;
+}
+
+.menu-title {
+	font-size: 12pt;
+	color: white;
+	padding-top: 10px;
+}
+
+.menu-subtitle {
+	font-size: 10pt;
+	color: #4e7699;
+	margin-top: -10px;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #214264;
+}
