@@ -15,6 +15,11 @@ get_header(); ?>
 				<section class="col-md-9">
 					<div id="boot-strap-slider">
 						<?php do_action('insert_bootstrapslider'); ?>	
+					</div> <!-- boot-strap-slider -->
+					<div id="home-news">
+						<h1 class="orange">
+							Destaques AADIC
+						</h1>
 					</div>
 				</section>
 <?

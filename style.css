@@ -81,7 +81,18 @@ div#main {
 	background-color: white;
 }
 
+div#content {
+	margin-left: 1px;
+}
+
 div#boot-strap-slider {
 	margin-top: 15px;
-	margin-left: 15px;
+}
+
+/**
+	NEWS
+**/
+h1.orange {
+	color: #0c2a4c;
+	font-size: 14pt;
 }
