@@ -72,6 +72,7 @@ body {
 .nav>li>a:hover, .nav>li>a:focus {
 	text-decoration: none;
 	background-color: #214264;
+	height: 95px;
 }
 
 /**
@@ -95,4 +96,52 @@ div#boot-strap-slider {
 h1.orange {
 	color: #0c2a4c;
 	font-size: 14pt;
+}
+
+#post-item {
+	padding: 6px;
+	height: 210px;
+}
+
+a {
+	margin-top: 5px;
+	height: 34px;
+	color: #0c2a4c;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+#post-title {
+	margin-top: 5px;
+	height: 34px;
+	color: #0c2a4c;
+	font-size: 10pt;
+}
+
+#post-content-resume {
+	margin-top: 5px;
+	font-size: 10pt;	
+}
+
+/**
+	CONTACT US
+**/
+section#contact-title p {
+	color: #0c2a4c;
+	font-size: 14pt;
+}
+
+/**
+	Schedule
+**/
+div#schedule ul {
+	padding-right: 5px;
+}
+
+div#schedule ul li {
+	list-style: none;
+}
+
+div#schedule ul li span{
+	font-size: 10pt;
 }
