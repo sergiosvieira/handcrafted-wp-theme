@@ -1,7 +1,5 @@
 <?php
 
-add_action( 'init', 'create_post_type' );
-
 function create_post_type() {
 	$labels = array(
 		'name'               => _x( 'Agendas', 'post type general name' ),
@@ -40,7 +38,7 @@ function schedule_box() {
     );
 }
 
-function schedule_box_content( $post ) {
+function schedule_box_content( $post ) {	//$nonce = wp_create_nonce( 'schedule_box_content_nonce' );
 	wp_nonce_field( plugin_basename( __FILE__ ), 'schedule_box_content_nonce' );
 
 	$date = get_post_meta( get_the_ID(), 'date', true );
@@ -49,27 +47,42 @@ function schedule_box_content( $post ) {
 	echo '<input type="text" id="date" name="date" placeholder="Digite a data do evento" value="' . $date . '" />';
 }
 
-add_action( 'add_meta_boxes', 'schedule_box' );
-
-add_action( 'save_post', 'schedule_box_save' );
-
 function schedule_box_save( $post_id ) {
-	echo $post_id;
+	if (count($_POST) == 0)
+	{
+		return;
+	}
+
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
 	return;
 
 	if ( !wp_verify_nonce( $_POST['schedule_box_content_nonce'], plugin_basename( __FILE__ ) ) )
-	return;
-
-	if ( 'page' == $_POST['post_type'] ) {
-		if ( !current_user_can( 'edit_page', $post_id ) )
-		return;
-	} else {
-		if ( !current_user_can( 'edit_post', $post_id ) )
-		return;
+	{
+		return;	
 	}
+	
+	if ( 'page' == $_POST['post_type'] ) 
+	{
+		if ( !current_user_can( 'edit_page', $post_id ) )
+		{
+			return;	
+		}
+	} 
+	else 
+	{
+		if ( !current_user_can( 'edit_post', $post_id ) )
+		{
+			return;	
+		}
+	}
+
 	$date = $_POST['date'];
-	echo $date;
 	update_post_meta( $post_id, 'date', $date );
 }
+
+add_action( 'save_post', 'schedule_box_save' );
+add_action( 'add_meta_boxes', 'schedule_box' );
+
+add_action( 'init', 'create_post_type' );
+
 ?>

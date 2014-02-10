@@ -8,7 +8,7 @@
 					<div id="newsletter">
 						<h1 class="orange">Boletim AADIC</h1>
 						<?php
-							echo do_shortcode("[simpleSubscribeForm]");
+							echo do_shortcode("[newsletter]");
 						?>
 					</div>
 					<div id="schedule">
@@ -54,6 +54,7 @@
 								}
 
 								echo '</ul>';
+								wp_reset_postdata();
 							}						
 						?>
 					</div>
@@ -63,8 +64,99 @@
 					</div>
 					<div id="partners">
 						<h1 class="orange">Parceiros</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisl lacus, molestie sed commodo volutpat, rutrum quis diam. Ut fringilla imperdiet pharetra. Fusce et mattis ipsum. Curabitur pulvinar egestas dolor nec porta. Phasellus rutrum, tortor ac consectetur iaculis, dui felis accumsan quam, quis tincidunt risus justo at quam. In vestibulum lorem non aliquam pulvinar. Curabitur a augue massa. Morbi mattis leo tellus, at porttitor neque aliquet eu. Pellentesque in enim sem. Pellentesque aliquet, velit quis porttitor viverra, risus massa suscipit mi, in faucibus quam enim at elit. Praesent egestas tortor a vestibulum aliquam.							
-						</p>						
+<?php
+							$args = array(
+								'post_type' => 'bravo_partners',
+								'order' => 'DESC' 
+							);
+
+							$the_query = new WP_Query($args);
+
+							// The Loop
+							if ( $the_query->have_posts() ) {
+								echo '<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">';
+								
+								$partnersArray = array();
+
+								while ( $the_query->have_posts() ) 
+								{
+									$the_query->the_post();
+									$array = array(
+										"title" => get_the_title(),
+										"thumbnail" => get_the_post_thumbnail(get_the_ID(), 'thumbnail')
+									);
+
+									array_push($partnersArray, $array);
+								}
+
+
+								echo '<ol class="carousel-indicators">';
+
+								$counter = 0;
+
+								foreach ($partnersArray as $partner) {
+	  								if ($counter == 0)
+	  								{
+	 									$output = '<li data-target="#carousel-example-generic" data-slide-to="%d" class="active"></li>';
+	  								}
+	    							else
+	    							{
+	    								$output =  '<li data-target="#carousel-example-generic" data-slide-to="%d"></li>';
+	    							}
+
+	    							echo sprintf($output, $counter);
+	    							$counter++;								
+								}
+
+								echo '</ol>';
+								echo '<div class="carousel-inner">';
+
+								$counter = 0;
+
+								foreach($partnersArray as $partner)
+								{
+									//var_dump($partnersArray);
+									$active = "";
+
+									if ($counter == 0)
+									{
+										$active = "active";
+									}
+
+									$output = '
+									    <div class="item '. $active .'">
+									      %s
+									    </div>';
+
+									$image = "";
+
+									if (!isset($partner["thumbnail"]) || strlen($partner["thumbnail"]) < 1)
+									{
+										$image = sprintf('<img src="http://dummyimage.com/209x209/000/fff" alt="" class="img-thumbnail">');
+									}
+									else
+									{
+										$image = sprintf('<img src="%s" alt="%s">', $partner["thumbnail"], $partner["title"]);
+									}
+
+									echo sprintf($output, $image);
+									$counter++;
+								}
+
+								echo '</div>';
+
+								echo '
+									  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+									    <span class="glyphicon glyphicon-chevron-left"></span>
+									  </a>
+									  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+									    <span class="glyphicon glyphicon-chevron-right"></span>
+									  </a>
+								';
+
+								echo '</div> <!-- carrousel -->';
+							}	
+							wp_reset_postdata();
+?>					
 					</div>
 				</section><!-- sidebar -->

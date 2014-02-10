@@ -7,7 +7,7 @@
 get_header(); ?>
 
 		<div id="primary">
-			<div id="content">
+			<div id="content-post" class="col-md-12">
 
 				<?php the_post(); ?>
 
@@ -19,14 +19,9 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'themename' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Alterar', 'themename' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-<?php the_ID(); ?> -->
-
-				<?php comments_template( '', true ); ?>
-
 			</div><!-- #content -->
 		</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -84,6 +84,12 @@ div#main {
 
 div#content {
 	margin-left: 1px;
+	min-height: 570px;
+}
+
+div#content-post {
+	padding: 10px;
+	background-color: white;
 }
 
 div#boot-strap-slider {
@@ -144,4 +150,61 @@ div#schedule ul li {
 
 div#schedule ul li span{
 	font-size: 10pt;
+}
+
+.newsletter-email {
+	width: 95%;
+}
+
+td {
+	padding-bottom: 5px;
+}
+
+/**
+	WORDPRESS POSTS AND PAGES
+**/
+h1.section-heading {
+	font-size: 16pt;
+}
+
+h1.entry-title {
+	font-size: 16pt;	
+}
+
+div.entry-meta {
+	padding-bottom: 5px;
+}
+
+/**
+	COMMENTS
+**/
+
+div#comments {
+	width: 960px;
+}
+
+h2#comments-title {
+	font-size: 16pt;
+}
+
+/**
+	SIDEBAR
+**/
+section#sidebar {
+
+}
+
+code {
+
+}
+
+/**
+	FOOTER
+**/
+
+footer div p {
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 12pt;
 }

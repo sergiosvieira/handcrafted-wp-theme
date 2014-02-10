@@ -89,7 +89,7 @@ get_header(); ?>
 								Para nós, atendimento é sinônimo de confiança, segurança e comprometimento em todos os momentos. Em que podemos lhe ajudar?
 							</p>
 						</section> <!-- contact-title -->
-						<section id="contact-email">
+						<section id="contact-email" class="col-md-offset-1 col-md-6">
 							<?php 
 								echo do_shortcode("[si-contact-form form='1']"); 
 							?>

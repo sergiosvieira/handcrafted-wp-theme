@@ -217,6 +217,15 @@ if (is_readable($file))
 	include_once($file);
 }
 
+/**
+	Partners
+**/
+$file = get_template_directory() . "/lib/admin-partners.php";
+if (is_readable($file))
+{
+	include_once($file);
+}
+
 ?>
 <?php // asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
 //	 change the UA-XXXXX-X to be your site's ID
