@@ -1,0 +1,210 @@
+/*
+Theme Name: AADIC Theme
+Theme URI: http://www.bravoinovacao.com
+Author: Sérgio Vieira
+Author URI: http://www.bravoinovacao.com
+Description: Customized AADIC Wordpress Theme
+Version: 0.5
+*/
+
+/** 
+	MISC
+**/
+
+#page {
+	margin-top: 50px;
+}
+
+#page-content {
+	background-color: white;
+	width: 960px;
+}
+
+.container{
+	padding-left: 24px;
+	width:960px
+}
+
+/**
+	BODY
+**/
+body {
+	background: url(images/bg-geral.jpg) no-repeat;
+	background-position: top;
+	background-color: #0c2a4c;
+}
+
+/**
+	HEADER
+**/
+#site-title {
+	background: url(images/topo.jpg);
+	height: 177px;
+	width: 960px;
+	display: block;
+	text-indent: -999999px;
+}
+
+/**
+	MENU
+**/
+.menu {
+	background: url(images/bg-menu.jpg) no-repeat;
+}
+
+.menu-item {
+	height: 103px;
+	display: block;
+}
+
+.menu-title {
+	font-size: 12pt;
+	color: white;
+	padding-top: 10px;
+}
+
+.menu-subtitle {
+	font-size: 10pt;
+	color: #4e7699;
+	margin-top: -10px;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #214264;
+	height: 95px;
+}
+
+/**
+	CONTENT
+**/
+div#main {
+	background-color: white;
+}
+
+div#content {
+	margin-left: 1px;
+	min-height: 570px;
+}
+
+div#content-post {
+	padding: 10px;
+	background-color: white;
+}
+
+div#boot-strap-slider {
+	margin-top: 15px;
+}
+
+/**
+	NEWS
+**/
+h1.orange {
+	color: #0c2a4c;
+	font-size: 14pt;
+}
+
+#post-item {
+	padding: 6px;
+	height: 210px;
+}
+
+a {
+	margin-top: 5px;
+	height: 34px;
+	color: #0c2a4c;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+#post-title {
+	margin-top: 5px;
+	height: 34px;
+	color: #0c2a4c;
+	font-size: 10pt;
+}
+
+#post-content-resume {
+	margin-top: 5px;
+	font-size: 10pt;	
+}
+
+/**
+	CONTACT US
+**/
+section#contact-title p {
+	color: #0c2a4c;
+	font-size: 14pt;
+}
+
+/**
+	Schedule
+**/
+div#schedule ul {
+	padding-right: 5px;
+}
+
+div#schedule ul li {
+	list-style: none;
+}
+
+div#schedule ul li span{
+	font-size: 10pt;
+}
+
+.newsletter-email {
+	width: 95%;
+}
+
+td {
+	padding-bottom: 5px;
+}
+
+/**
+	WORDPRESS POSTS AND PAGES
+**/
+h1.section-heading {
+	font-size: 16pt;
+}
+
+h1.entry-title {
+	font-size: 16pt;	
+}
+
+div.entry-meta {
+	padding-bottom: 5px;
+}
+
+/**
+	COMMENTS
+**/
+
+div#comments {
+	width: 960px;
+}
+
+h2#comments-title {
+	font-size: 16pt;
+}
+
+/**
+	SIDEBAR
+**/
+section#sidebar {
+
+}
+
+code {
+
+}
+
+/**
+	FOOTER
+**/
+
+footer div p {
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 12pt;
+}
