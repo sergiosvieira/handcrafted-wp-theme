@@ -47,7 +47,7 @@
 
 			echo sprintf($output, $link, $title, $subtitle);
 		}
-		echo '/ul';
+		echo '</ul>';
 
 	}
 ?>

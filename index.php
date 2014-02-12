@@ -41,15 +41,15 @@ get_header();
 							<li id="post-item">
 									<div id="post-image">
 									<?php
-										$thumbnail = get_post_meta( get_the_ID(), 'image', true );;
+										$thumbnail = get_the_post_thumbnail(get_the_ID(), array(211, 131));
 
 										if (isset($thumbnail))
 										{
-											echo '<img src="'. $thumbnail . '" />';
+											echo $thumbnail;
 										}
 										else
 										{
-											echo '<img src="http://lorempixel.com/211/131/abstract" alt="">';
+											echo '<img src="http://dummyimage.com/211x131/000/fff" alt="">';
 										}
 									?>
 									</div>

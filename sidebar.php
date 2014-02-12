@@ -83,7 +83,7 @@
 									$the_query->the_post();
 									$array = array(
 										"title" => get_the_title(),
-										"thumbnail" => get_the_post_thumbnail(get_the_ID(), 'thumbnail')
+										"thumbnail" => get_the_post_thumbnail(get_the_ID(), array(209, 209))
 									);
 
 									array_push($partnersArray, $array);
@@ -136,7 +136,7 @@
 									}
 									else
 									{
-										$image = sprintf('<img src="%s" alt="%s">', $partner["thumbnail"], $partner["title"]);
+										$image = $partner["thumbnail"];
 									}
 
 									echo sprintf($output, $image);
