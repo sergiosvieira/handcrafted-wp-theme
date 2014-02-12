@@ -5,15 +5,6 @@
  */
 
 /**
-	Custom Functions
-**/
-$file = get_template_directory() . "/lib/list-pages.php";
-if (is_readable($file))
-{
-	include_once($file);
-}
-
-/**
  * Make theme available for translation
  * Translations can be filed in the /languages/ directory
  */
@@ -221,6 +212,15 @@ if (is_readable($file))
 	Partners
 **/
 $file = get_template_directory() . "/lib/admin-partners.php";
+if (is_readable($file))
+{
+	include_once($file);
+}
+
+/**
+	Custom Functions
+**/
+$file = get_template_directory() . "/lib/list-pages.php";
 if (is_readable($file))
 {
 	include_once($file);
