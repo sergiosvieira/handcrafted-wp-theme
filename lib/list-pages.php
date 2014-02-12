@@ -22,28 +22,32 @@
 		  'post_type'    => 'page',
 		  'post_status'  => 'publish'
 		);
-		$pages = get_pages($args);
-?>
 
-						<ul class="nav nav-pills nav-justified menu">
-<?php
-		foreach ($pages as $page) {
+		$pages = get_pages($args);
+
+		echo '<ul class="nav nav-pills nav-justified menu">';
+		foreach ($pages as $page) 
+		{
 			$title = $page->post_title;
 			$subtitle = get_post_meta($page->ID, "subtitle", true);
 			$link = get_page_link($page->ID);
-?>
+
+			$output = '
 							<li>
-								<a href="<?php echo $link; ?>" class="menu-item">
+								<a href="%s" class="menu-item">
 									<p class="menu-title">
-										<?php echo $title ?>	
+										%s	
 									</p>
 									<p class="menu-subtitle">
-										<?php echo $subtitle; ?>
+										%s
 									</p>
 								</a>							
 							</li>
-<?php
+			';
+
+			echo sprintf($output, $link, $title, $subtitle);
 		}
-}
+		echo '/ul';
+
+	}
 ?>
-						</ul>
