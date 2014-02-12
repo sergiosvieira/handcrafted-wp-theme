@@ -4,7 +4,6 @@
  * @subpackage themename
  */
 ?>
-		<!--<img src="<?php echo get_template_directory_uri(); ?>/images/rodape-parceiros.jpg" alt="">-->
 		</div><!-- #main  -->
 	</div> <!-- page content -->
 
