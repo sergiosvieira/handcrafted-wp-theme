@@ -19,7 +19,7 @@ get_header();
 						<?php do_action('insert_bootstrapslider'); ?>	
 					</div> <!-- boot-strap-slider -->
 					<div id="home-news">
-						<h1 class="orange">
+						<h1 class="orange-full">
 							Destaques AADIC
 						</h1>
 						<?php

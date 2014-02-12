@@ -199,31 +199,20 @@ if (!current_user_can('manage_options')) {
 	add_action('admin_head', 'themename_configure_dashboard_menu'); // Add action to hide admin menu items
 }
 
-/**
-	Schedule
-**/
-$file = get_template_directory() . "/lib/admin-schedule.php";
-if (is_readable($file))
-{
-	include_once($file);
-}
+$array = array(
+	"/lib/admin-schedule.php",
+	"/lib/admin-partners.php",
+	"/lib/list-pages.php",
+	"/lib/list-all-posts.php"
+);
 
-/**
-	Partners
-**/
-$file = get_template_directory() . "/lib/admin-partners.php";
-if (is_readable($file))
+foreach ($array as $file)
 {
-	include_once($file);
-}
-
-/**
-	Custom Functions
-**/
-$file = get_template_directory() . "/lib/list-pages.php";
-if (is_readable($file))
-{
-	include_once($file);
+	$file_path = get_template_directory() . $file;
+	if (is_readable($file_path))
+	{
+		include_once($file_path);
+	}	
 }
 
 ?>
