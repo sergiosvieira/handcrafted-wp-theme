@@ -94,7 +94,8 @@ get_header();
 							}
 
 							wp_reset_postdata();
-						?>						
+						?>
+						<?php echo '<a class="btn btn-primary navbar-btn" href="' . get_permalink( get_page_by_title( 'Notícias' ) ) .'">Ver todas</a>'; ?>						
 					</div>
 					<div id="contact">
 						<section id="contact-title">
