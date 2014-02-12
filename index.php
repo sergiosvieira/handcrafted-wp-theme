@@ -10,7 +10,14 @@ get_header();
 		<div id="primary">
 			<div id="content" class="row">
 				<?php 
-					if (is_home())
+					
+					$type = $_GET['type'] ? $_GET['type'] : "";
+
+					if ($type == "schedule")
+					{
+						get_template_part('schedules');
+					}
+					else if (is_home())
 					{
 ?>
 <!-- Home -->

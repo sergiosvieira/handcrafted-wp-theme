@@ -59,6 +59,7 @@
 								wp_reset_postdata();
 							}						
 						?>
+						<?php echo '<a class="btn btn-primary navbar-btn" href="' . home_url( '/?type=schedule' ) .'">Ver todas</a>'; ?>						
 					</div>
 					<div id="facebook">
 						<h1 class="red">Facebook AADIC</h1>
