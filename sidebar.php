@@ -6,13 +6,15 @@
 ?>
 				<section id="sidebar" class="col-md-3">
 					<div id="newsletter">
-						<h1 class="orange">Boletim AADIC</h1>
+						<h1 class="orange">
+							<span>Boletim AADIC</span>
+						</h1>
 						<?php
 							echo do_shortcode("[newsletter]");
 						?>
 					</div>
 					<div id="schedule">
-						<h1 class="orange">Agenda AADIC</h1>
+						<h1 class="green">Agenda AADIC</h1>
 						<?php
 							$args = array(
 								'post_type' => 'bravo_schedule',
@@ -59,11 +61,11 @@
 						?>
 					</div>
 					<div id="facebook">
-						<h1 class="orange">Facebook AADIC</h1>
+						<h1 class="red">Facebook AADIC</h1>
 						<div class="fb-like-box" data-width="209" data-href="http://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" ></div>
 					</div>
 					<div id="partners">
-						<h1 class="orange">Parceiros</h1>
+						<h1 class="blue">Parceiros</h1>
 <?php
 							$args = array(
 								'post_type' => 'bravo_partners',

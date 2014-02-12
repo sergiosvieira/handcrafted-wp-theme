@@ -100,8 +100,51 @@ div#boot-strap-slider {
 	NEWS
 **/
 h1.orange {
+	width: 95%;
 	color: #0c2a4c;
 	font-size: 14pt;
+	border-style: solid;
+	border-width: 0px 0px 3px;
+	-moz-border-image: url(images/separador-laranja.jpg) 0 0 3 stretch repeat;
+	-webkit-border-image: url(images/separador-laranja.jpg) 0 0 3 stretch repeat;
+	-o-border-image: url(images/separador-laranja.jpg) 0 0 3 stretch repeat;
+	border-image: url(images/separador-laranja.jpg) 0 0 3 fill stretch repeat;	
+}
+
+h1.blue {
+	width: 95%;
+	color: #0c2a4c;
+	font-size: 14pt;
+	border-style: solid;
+	border-width: 0px 0px 3px;
+	-moz-border-image: url(images/separador-azul.jpg) 0 0 3 stretch repeat;
+	-webkit-border-image: url(images/separador-azul.jpg) 0 0 3 stretch repeat;
+	-o-border-image: url(images/separador-azul.jpg) 0 0 3 stretch repeat;
+	border-image: url(images/separador-azul.jpg) 0 0 3 fill stretch repeat;	
+}
+
+h1.green {
+	width: 95%;
+	color: #0c2a4c;
+	font-size: 14pt;
+	border-style: solid;
+	border-width: 0px 0px 3px;
+	-moz-border-image: url(images/separador-verde.jpg) 0 0 3 stretch repeat;
+	-webkit-border-image: url(images/separador-verde.jpg) 0 0 3 stretch repeat;
+	-o-border-image: url(images/separador-verde.jpg) 0 0 3 stretch repeat;
+	border-image: url(images/separador-verde.jpg) 0 0 3 fill stretch repeat;	
+}
+
+h1.red {
+	width: 95%;
+	color: #0c2a4c;
+	font-size: 14pt;
+	border-style: solid;
+	border-width: 0px 0px 3px;
+	-moz-border-image: url(images/separador-vermelho.jpg) 0 0 3 stretch repeat;
+	-webkit-border-image: url(images/separador-vermelho.jpg) 0 0 3 stretch repeat;
+	-o-border-image: url(images/separador-vermelho.jpg) 0 0 3 stretch repeat;
+	border-image: url(images/separador-vermelho.jpg) 0 0 3 fill stretch repeat;	
 }
 
 #post-item {
@@ -208,3 +251,4 @@ footer div p {
 	color: #ffffff;
 	font-size: 12pt;
 }
+
