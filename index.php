@@ -40,7 +40,18 @@ get_header();
 ?>
 							<li id="post-item">
 									<div id="post-image">
-										<img src="http://lorempixel.com/211/131/abstract" alt="">
+									<?php
+										$thumbnail = get_post_meta( get_the_ID(), 'image', true );;
+
+										if (isset($thumbnail))
+										{
+											echo '<img src="'. $thumbnail . '" />';
+										}
+										else
+										{
+											echo '<img src="http://lorempixel.com/211/131/abstract" alt="">';
+										}
+									?>
 									</div>
 									<div id="post-title">
 										<a href="<?php echo the_permalink(); ?>">
@@ -108,4 +119,5 @@ get_header();
 				?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
+
 <?php get_footer(); ?>
