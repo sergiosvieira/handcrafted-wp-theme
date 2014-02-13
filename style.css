@@ -219,6 +219,10 @@ section#contact-title p {
 	font-size: 14pt;
 }
 
+#contact-email {
+	padding: 5px;
+}
+
 /**
 	Schedule
 **/
