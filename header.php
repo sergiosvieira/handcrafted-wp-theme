@@ -87,4 +87,4 @@
 						 ?> 
 					</nav><!-- #access -->
 			</header><!-- #branding -->
-			<div id="main">
+			<div id="main" class="col-md-12">

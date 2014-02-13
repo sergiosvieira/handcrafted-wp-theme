@@ -1,16 +1,12 @@
-<div id="content-post" class="col-md-9">
-	<article role="article">
-		<header class="entry-header">
-			<h1 class="entry-title green">Agenda</h1>
-		</header><!-- .entry-header -->
-
-		<div class="entry-content">
 <?php
+
+function list_all_schedules($atts)
+{
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	//$paged = $_GET['paged'] ? $_GET['paged'] : "";
 
 	$args = array(
 		'post_type' => 'bravo_schedule',
+		'posts_per_page' => 10,
 		'paged' => $paged,
 		'order' => 'DESC' 
 	);
@@ -18,8 +14,10 @@
 	$the_query = new WP_Query($args);
 
 	// The Loop
-	if ( $the_query->have_posts() ) 
-	{
+	if ( $the_query->have_posts() ) {
+?>								
+	<ul>
+<?php
 		echo '<ul class="list-group">';
 
 		while ( $the_query->have_posts() ) 
@@ -51,17 +49,23 @@
 
 		echo '</ul>';
 		wp_reset_postdata();
-?>
+?>								
+	</ul>
+
 	<nav id="nav-below" role="article">
 		<ul class="pager">
 		  <li class="previous"><?php echo get_previous_posts_link( 'Anteriores', $the_query->max_num_pages ); ?></li>
 		  <li class="next"><?php echo get_next_posts_link( 'Próximos', $the_query->max_num_pages ); ?></li>
 		</ul>
 	</nav><!-- #nav-below -->
-<?php		
-	}						
-?>
-		</div>
-	</article><!-- #post-10 -->
-</div>
 
+<?php
+		} else {
+			// no posts found
+		}
+
+		wp_reset_postdata();
+}
+
+add_shortcode('list_all_schedules', 'list_all_schedules');
+?>

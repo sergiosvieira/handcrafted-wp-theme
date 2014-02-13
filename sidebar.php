@@ -58,8 +58,14 @@
 								echo '</ul>';
 								wp_reset_postdata();
 							}						
+						?>						
+						<?php 
+							$query = new WP_Query('name=agenda-aadic');
+							$query->the_post();	
+							$id = get_the_ID();
+							echo '<a class="btn btn-primary navbar-btn" href="' . get_permalink( $id ). '&show=no' .'">Ver todas</a>'; 
+							wp_reset_postdata();
 						?>
-						<?php echo '<a class="btn btn-primary navbar-btn" href="' . home_url( '/?type=schedule' ) .'">Ver todas</a>'; ?>						
 					</div>
 					<div id="facebook">
 						<h1 class="red">Facebook AADIC</h1>

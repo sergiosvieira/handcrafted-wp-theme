@@ -25,6 +25,10 @@ Version: 0.5
 	width:960px
 }
 
+ul {
+	list-style: none;
+}
+
 /**
 	BODY
 **/
@@ -59,12 +63,14 @@ body {
 
 .menu-title {
 	font-size: 12pt;
+	font-weight: lighter;
 	color: white;
 	padding-top: 10px;
 }
 
 .menu-subtitle {
 	font-size: 10pt;
+	font-weight: lighter;
 	color: #4e7699;
 	margin-top: -10px;
 }
@@ -101,7 +107,7 @@ div#boot-strap-slider {
 **/
 h1.orange {
 	padding-bottom: 5px;
-	width: 95%;
+	width: 100%;
 	color: #0c2a4c;
 	font-size: 14pt;
 	border-style: solid;
@@ -126,7 +132,7 @@ h1.orange-full {
 
 h1.blue {
 	padding-bottom: 5px;
-	width: 95%;
+	width: 100%;
 	color: #0c2a4c;
 	font-size: 14pt;
 	border-style: solid;
@@ -139,7 +145,7 @@ h1.blue {
 
 h1.green {
 	padding-bottom: 5px;
-	width: 95%;
+	width: 100%;
 	color: #0c2a4c;
 	font-size: 14pt;
 	border-style: solid;
@@ -152,7 +158,7 @@ h1.green {
 
 h1.red {
 	padding-bottom: 5px;
-	width: 95%;
+	width: 100%;
 	color: #0c2a4c;
 	font-size: 14pt;
 	border-style: solid;
@@ -212,7 +218,7 @@ div#schedule ul li span{
 }
 
 .newsletter-email {
-	width: 95%;
+	width: 100%;
 }
 
 td {
@@ -250,7 +256,8 @@ h2#comments-title {
 	SIDEBAR
 **/
 section#sidebar {
-
+	background-color: white;
+	height: 100%;
 }
 
 code {

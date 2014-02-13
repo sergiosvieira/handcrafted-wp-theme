@@ -16,6 +16,7 @@ get_header();
 					if ($type == "schedule")
 					{
 						get_template_part('schedules');
+						get_sidebar();
 					}
 					else if (is_home())
 					{
@@ -31,6 +32,7 @@ get_header();
 						</h1>
 						<?php
 							$args = array(
+								'category_name' => 'noticias',
 								'posts_per_page' => 3, 
 								'order' => 'DESC' 
 							);
@@ -122,7 +124,7 @@ get_header();
 					}
 					else
 					{
-						get_template_part( 'loop', 'index' ); 	
+						get_template_part( 'loop', 'index' );
 					}
 				?>
 			</div><!-- #content -->

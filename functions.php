@@ -203,7 +203,9 @@ $array = array(
 	"/lib/admin-schedule.php",
 	"/lib/admin-partners.php",
 	"/lib/list-pages.php",
-	"/lib/list-all-posts.php"
+	"/lib/list-all-posts.php",
+	"/lib/list-all-schedules.php",
+	"/lib/list-all-partners.php"
 );
 
 foreach ($array as $file)
