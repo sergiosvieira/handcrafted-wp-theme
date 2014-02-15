@@ -50,7 +50,7 @@
 									echo sprintf( 
 										$output,
 										$date,
-										$link,
+										$link . '&show=no',
 										$small_title . $tmp
 									);
 								}
